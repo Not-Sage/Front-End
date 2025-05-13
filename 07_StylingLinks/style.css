@@ -1,0 +1,19 @@
+body{
+    padding: 10%;
+    font-size: 1.5rem;
+    font-family: serif;
+    cursor:auto;
+}
+a{
+    text-decoration: underline;
+    cursor:pointer;
+}
+a:visited{
+    color: purple;
+}
+a:hover, a:focus{
+    opacity: 0.8;
+}
+a:active{
+    color: aqua;
+}

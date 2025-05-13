@@ -1,0 +1,28 @@
+/*
+Typography is the way text is arranged 
+and presented in a design.
+*/
+body{
+    padding: 5%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    color: #333;
+    background: wheat;
+}
+input, button{
+    font:inherit;
+    background: inherit;
+    border: 2px solid #333;
+    border-radius: 5px 10px;   
+}
+p{
+    text-decoration: underline;
+    text-transform:capitalize;
+    text-align:left;
+    text-indent: 4em;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    font-weight: 500;
+    font-style: normal;
+}

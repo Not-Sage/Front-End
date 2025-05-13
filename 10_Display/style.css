@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-size: 1.5rem;
+    font-family: public sans;
+    background-color: wheat;
+    color: #333;
+}
+p{
+    background: lightgray;
+}
+.opposite{
+    background: #333;
+    color: whitesmoke;
+}

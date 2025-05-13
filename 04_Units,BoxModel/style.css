@@ -1,0 +1,43 @@
+body{
+    background: wheat;
+    color:#333;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.elements, p{
+    border: 6px double #333;
+    outline: 2px solid purple;
+    outline-offset: 2px;
+    width: 80%;
+}
+h1{
+    font-size: 3rem;
+    padding: 0.5rem;
+}
+p{
+    font-size: 1.3rem;
+}
+.circle{
+    height: 20rem;
+    width: 20rem;
+    background-color: lightcoral;
+    margin: 16px auto;
+    outline: 4px solid lightsalmon;
+    outline-offset: 2px ;
+}
+.circle1{
+    border-radius: 50%;
+}
+.circle2{
+    border-radius: 10% 20%;
+}
+.circle3{
+    border-radius: 10% 20% 30% 40%;
+}
+.circle4{
+    border-radius: 10% 50%;
+}

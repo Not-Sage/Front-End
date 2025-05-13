@@ -1,0 +1,40 @@
+body{
+    line-height: 1.5;
+    background-color: papayawhip;
+}
+h1, h2{
+    color:darkturquoise
+}
+p{
+    color:#333;
+}
+.article1{
+    text-decoration: double underline;
+}
+.article2{
+    text-decoration: wavy underline;
+}
+.article3{
+    text-decoration:dotted underline;
+}
+.p1{
+    font-style: italic;
+    font-size: 1.5em;
+}
+.p2{
+    font-style: oblique;
+    font-size: 1.5em;
+}
+.p3{
+    font-style:normal;
+    font-size: 1.5em;
+    font-family: cursive;
+}
+.smallinfo{
+    font-size: 2em;
+    color: lightcoral;
+    font-family: monospace;
+}
+h3 p{
+    color:lightseagreen;
+}

@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Delius&family=Tangerine:wght@400;700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+body{
+    padding: 10%;
+    background: #EFD28D;
+    color: #D13C00;
+    font-family: "Dancing Script";
+    font-size: 1.2em;
+}
+main article{
+    text-align: center;
+}
+.o2{
+    list-style-type:lower-roman;
+}
+.o3{
+    list-style-type:lower-alpha;
+}
+.u1{
+    list-style-type:disc;
+    list-style-position: inside;
+    line-height: 1.6;
+}
+.u2{
+    list-style-type:square;
+    list-style-position: inside;
+}
+.u3{
+    list-style-type:circle;
+    list-style-position: inside;
+}
+ul li:nth-child(3), li:nth-child(5),li:nth-child(7),li:nth-child(9), li:nth-child(1){
+    list-style-position: inside;
+}
+ul ::marker{
+    content: "Buy Now!! ";
+}
