@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: 'Public Sans', sans-serif;
+    background-color: bisque;
+    color: #333;
+    font-family: 1.4rem;
+}
+.column{
+    /* column-count: 6;
+    column-width: 200px; */
+    columns : 6 200px;
+    column-rule: 1px solid #000;
+    column-gap: 2rem;
+}
+.column p{
+    margin-top: 0;
+}
+.column h2{
+    margin-top: 0;
+    background-color: lightgray;
+    break-inside: avoid;
+}
+.column .quote{
+    font-size: 3rem;
+    text-align: center;
+    column-span: all;
+    margin-top: 2rem;
+}
