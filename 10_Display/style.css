@@ -5,10 +5,13 @@ body{
     background-color: wheat;
     color: #333;
 }
-p{
-    background: lightgray;
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+    background: #000;
+    margin: 0;
 }
-.opposite{
-    background: #333;
-    color: whitesmoke;
+li{
+    display:inline-block;
 }
