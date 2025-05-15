@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Variable */
+:root{
+    /* Colors */
+    --BGCOLOR : teal;
+    --BGCOLOR2 : aliceblue;
+    --TEXTCOLOR : whitesmoke;
+    --BG-GRADIENT1 : radial-gradient(white,lightskyblue);
+    --BG-GRADIENT2 : linear-gradient(white,lightskyblue);
+    --BG-GRADIENT3 : conic-gradient(white,lightskyblue);
+    --DARKCOLOR : #333;
+    --DARKCOLOR2 : #000;
+
+    /* Font */
+    --FF : "Nunito", sans-serif;
+    --FS : 1.5rem;
+    --FS2 : 1.8rem;
+    /* Units */
+    --PADDING : 0.5rem;
+
+    --SHADOW : 0 6px 5px -5px var(--DARKCOLOR2);
+
+    /* Squares */
+    --SQUARE-BG : lightblue;
+    --SQUARE-SIZE : max(150px,20vw);
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --BGCOLOR : #333;
+        --BGCOLOR2 : whitesmoke;
+        --TEXTCOLOR : #fff;
+        --DARKCOLOR : white;
+        --DARKCOLOR2 : aliceblue;
+        --SQUARE-BG : ;
+        --BG-GRADIENT1 : radial-gradient(#333,lightskyblue);
+    }
+}
+
+body{
+    font-size: var(--FS);
+    font-family: var(--FF);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: var(--BG-GRADIENT1);
+}
+
+header, footer, main, nav{;
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+}
+
+header, footer{
+    color: var(--BGCOLOR2);
+    background-color: var(--BGCOLOR);
+    font-size: var(--FS2);
+}
+
+nav{
+    background-color: var(--BGCOLOR2);
+    border-bottom: 1px solid var(--DARKCOLOR);
+    padding: var(--PADDING);
+    box-shadow: var(--SHADOW);
+}
+
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    gap: min(4vw,15px);
+    padding: 10px 0;
+}
+
+header{
+    position:sticky;
+    top:0;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    position:sticky;
+    bottom: 0;
+}
+
+.square{
+    background-color: var(--SQUARE-BG);
+    height: var(--SQUARE-SIZE);
+    width: var(--SQUARE-SIZE);
+    border: 1px solid var(--DARKCOLOR);
+    border-radius: 15px;
+    display: grid;
+    place-content: center;
+    box-shadow: var(--SHADOW);
+    font-size: var(--FS2);
+}
+
+.square-highlight{
+    --SQUARE-BG : papayawhip;
+}
