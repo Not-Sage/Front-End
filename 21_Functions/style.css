@@ -14,12 +14,12 @@
     --BG-GRADIENT1 : radial-gradient(white,lightskyblue);
     --BG-GRADIENT2 : linear-gradient(white,lightskyblue);
     --BG-GRADIENT3 : conic-gradient(white,lightskyblue);
-    --DARKCOLOR : #333;
+    --DARKCOLOR : #424446;
     --DARKCOLOR2 : #000;
 
     /* Font */
     --FF : "Nunito", sans-serif;
-    --FS : 1.5rem;
+    --FS : clamp(1.75rem, 3vh,2.5rem);
     --FS2 : 1.8rem;
     /* Units */
     --PADDING : 0.5rem;
@@ -31,7 +31,7 @@
     --SQUARE-SIZE : max(150px,20vw);
 }
 
-@media (prefers-color-scheme: dark){
+@media (prefers-color-scheme: light){
     :root{
         --BGCOLOR : #333;
         --BGCOLOR2 : whitesmoke;
@@ -79,11 +79,24 @@ nav{
 main{
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
+    padding: var(--PADDING);
+    /* flex-direction: column;
     justify-content: space-evenly;
-    flex-flow: row wrap;
+    flex-flow: row wrap; */
     gap: min(4vw,15px);
-    padding: 10px 0;
+}
+ 
+main section{
+    flex-grow: 1;
+    padding: var(--PADDING);
+}
+
+main aside{
+    background-color: hsla(0, 0%, 20%, 0.600);
+    color: var(--TEXTCOLOR);
+    font-size: var(--FS1);
+    font-style: italic;
+    padding: var(--PADDING);
 }
 
 header{
@@ -111,4 +124,48 @@ footer{
 
 .square-highlight{
     --SQUARE-BG : papayawhip;
+}
+
+.content{
+    margin-top: 1.2rem;
+}
+
+.tooltip{
+    border-bottom: 2px solid darkturquoise;
+    position: relative;
+}
+
+.tooltip:hover::after{
+    content: attr(data-tooltip);
+    position: relative;
+    top:-20px;
+    white-space: nowrap;
+    background-color: var(--BGCOLOR);
+    padding: var(--PADDING);
+    border-radius: 15px;
+}
+
+a:any-link{
+    color: teal;
+    text-decoration: none;
+    border-bottom: 0px solid var(--DARKCOLOR);
+    transition: all 0.3s ease-in-out;
+    border-bottom: 1px solid var(--DARKCOLOR);
+}   
+
+a:hover, a:focus{
+    filter: brightness(200%);
+}
+
+@media screen and (min-width: 576px){
+    main{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    main section{
+        width: calc(70% - 5px);
+    }
+    main aside{
+        width: calc(30% - 5px);
+    }
 }
