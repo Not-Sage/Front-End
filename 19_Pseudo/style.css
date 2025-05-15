@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.7rem;
+}
+
+
+body{
+    font-size: 1.5rem;
+    font-family: "Nunito", sans-serif;
+    min-height: 100vh;
+    background-color: aliceblue;
+    background-image: radial-gradient(white,lightblue);
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+header, footer{
+    position: sticky;
+    background-color: lightskyblue;
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    padding: 1rem;
+}
+
+nav{
+    background-color: aliceblue;
+    color: #333;
+    padding: 0.5rem;
+    border-bottom: 2px solid #333;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a:any-link{
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    transition: all 0.2s ease-in-out;
+}
+
+nav :is(a:hover,a:focus){
+    color: hsla(0, 0%, 20%, 0.700);
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+nav a:active{
+    color: teal;
+}
+
+header{
+    top:0;
+}
+
+footer{
+    bottom:0;
+}
+
+.card{
+    scroll-margin-top: 8rem;
+    width: min(100%,350px);
+    background-color: aliceblue;
+    background-image: radial-gradient(white,lightblue);
+    border: 2px solid #333;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover{
+    box-shadow: 2px 2px 10px black;
+}
+
+.card figure{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.card figcaption{
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0.5rem;
+    text-align: center;
+    text-transform:uppercase;
+}
+
+.card img{
+    border: 5px double #333;
+    box-shadow: 0 0 10px #333;
+    border-radius: 50%;
+}
+
+/* This Property only applies to the images with no alt */
+
+.card img[alt]{
+    text-shadow: 5px 5px 10px #333;
+}
+
+/* To check if there is an image without an alt atribure */
+
+.card img:not([alt]){
+    border: 10px solid red;
+    scale: 2;
+}
+
+/* This is an after pseudo element */
+
+.card figcaption::after{
+    content: " ✨";
+    display: block
+}
+
+.card figcaption::first-letter{
+    font-size: 5rem;
+    color:teal;
+}
+
+/* This is an before pseudo element */
+
+/* .card figcaption::before{
+    content: " ✨";
+    display: block
+} */
+
+@media screen and (min-width:576px){
+    main{
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
+    }
+    .card{
+        width:min(100%,350px);
+    }
+}
+@media screen and (min-width:768px){
+    nav{
+        display:none;
+    }
+    .card{
+        width:min(100%,350px);
+    }
+    .card figure{
+        flex-flow:column-reverse
+    }
+}
+@media screen and (min-width:992px){
+    main{
+        justify-content: center;
+        flex-flow: row nowrap;
+        /* padding: 1rem; */
+    }
+    .card{
+        width:min(100%,400px);
+    }
+    nav{
+        display:none;
+    }
+}
+@media screen and (min-width:1200px){
+    main{
+        justify-content: center;
+        flex-flow: row nowrap;
+        /* padding: 1rem; */
+    }
+    .card{
+        width:min(calc(33% - 1rem),450px);
+    }
+    nav{
+        display:none;
+    }
+}
+@media screen and (min-width:425px)and (min-aspect-ratio:7/4){
+    nav{
+        display:none;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    main{
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+    .card{
+        width:min(calc(33%-0.25rem),200px);
+    }
+    .card figcaption, .card p{
+        font-size:1.25rem;
+    }
+}
