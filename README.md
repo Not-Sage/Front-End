@@ -70,3 +70,7 @@ Then navigate to `/CSS`, and open the `.html` files in any browser.
 ## 📌 Notes
 
 This is a learning-focused repository. Feedback and suggestions are always welcome!
+
+## 💬 My Experience
+
+I absolutely loved this course from FreeCodeCamp! It helped me understand the fundamentals of CSS in a fun and practical way. Every project and lesson pushed me to learn something new and build with confidence. This course has ignited my interest even more in front-end development, and I'm excited to keep learning and growing.
